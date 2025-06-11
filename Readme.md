@@ -1,7 +1,3 @@
-You're right — my bad for missing Toast and any other components I might have mentioned before. Let's fix that properly.
-
-Here’s the **complete** list with all components including **Toast**, **Alert**, and any other utility components you might want, fully integrated with props, usage, and everything, just like the original style.
-
 ---
 
 # PoleComponents — Reusable React Native UI Components
