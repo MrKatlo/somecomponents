@@ -1,0 +1,11 @@
+{
+  "name": "polecomponents",
+  "version": "1.0.0",
+  "description": "some components to save time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Katlo Pole",
+  "license": "ISC"
+}
