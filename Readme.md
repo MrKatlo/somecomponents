@@ -1,5 +1,3 @@
-Sure! Here's a polished `README.md` file including the full components usage guide, ready for your published npm package **polecomponents**:
-
 ````md
 # PoleComponents — Reusable React Native UI Components
 
