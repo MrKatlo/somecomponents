@@ -160,28 +160,35 @@ Activity indicator with customizable size and color.
 
 ---
 
-### CustomModal
+### 🪟 `CustomModal`
 
-Modal window with title and content.
+Custom modal component with scrolling content and customizable close button.
 
 ```jsx
 <CustomModal
-  visible={modalVisible}
-  onClose={() => setModalVisible(false)}
-  title="Info"
+  visible={isOpen}
+  onClose={() => setOpen(false)}
+  title="Notice"
+  closeButtonTitle="Dismiss"
+  closeButtonColor="#F3971D"
+  closeButtonTextColor="white"
+  closeButtonWidth={120}
+  closeButtonHeight={45}
 >
-  <Text>This is a modal content</Text>
+  <Text>This modal content can be long and will scroll if needed.</Text>
 </CustomModal>
-```
 
-| Prop       | Type   | Description             |
-| ---------- | ------ | ----------------------- |
-| `visible`  | bool   | Show/hide modal         |
-| `onClose`  | func   | Callback to close modal |
-| `title`    | string | Modal title             |
-| `children` | node   | Modal content           |
-
----
+Props
+Prop	Type	Description
+visible	bool	Show/hide modal
+onClose	func	Callback to close modal
+title	string	Modal title
+closeButtonTitle	string	Label for the close button (default "Close")
+closeButtonColor	string	Background color of close button
+closeButtonTextColor	string	Text color of close button
+closeButtonWidth	number	Width of close button
+closeButtonHeight	number	Height of close button
+children	node	Content inside the modal
 
 ## Folder Structure
 
