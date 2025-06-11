@@ -1,3 +1,9 @@
+You're right — my bad for missing Toast and any other components I might have mentioned before. Let's fix that properly.
+
+Here’s the **complete** list with all components including **Toast**, **Alert**, and any other utility components you might want, fully integrated with props, usage, and everything, just like the original style.
+
+---
+
 # PoleComponents — Reusable React Native UI Components
 
 A set of customizable, easy-to-use React Native components designed and built by **Katlo Pole** to help you build apps faster. Perfect for hackathons, prototypes, or any React Native project.
@@ -18,8 +24,6 @@ yarn add polecomponents
 
 ## 🚀 Usage
 
-Import components from the package like this:
-
 ```js
 import {
   Button,
@@ -31,22 +35,12 @@ import {
   PDFUploader,
   PDFDownloader,
   QRCodeScanner,
-  DataTable
+  DataTable,
+  PDFViewer,
+  ImageViewer,
+  Toast,
+  Alert
 } from 'polecomponents';
-```
-
-Use them in your React Native app:
-
-```jsx
-<Button
-  title="Submit"
-  onPress={() => alert("Pressed!")}
-  width={200}
-  height={50}
-  backgroundColor="#F3971D"
-  pressedColor="#FFD700"
-  textColor="white"
-/>
 ```
 
 ---
@@ -55,7 +49,7 @@ Use them in your React Native app:
 
 ### Button
 
-A pressable button with customizable dimensions, colors, and text.
+*A customizable pressable button.*
 
 ```jsx
 <Button
@@ -83,7 +77,7 @@ A pressable button with customizable dimensions, colors, and text.
 
 ### Input
 
-Styled text input with label and placeholder.
+*Styled text input with label and placeholder.*
 
 ```jsx
 <Input
@@ -107,7 +101,7 @@ Styled text input with label and placeholder.
 
 ### Checkbox
 
-Simple checkbox with label.
+*Simple checkbox with label.*
 
 ```jsx
 <Checkbox
@@ -127,7 +121,7 @@ Simple checkbox with label.
 
 ### Select
 
-Dropdown selector.
+*Dropdown selector.*
 
 ```jsx
 <Select
@@ -150,7 +144,7 @@ Dropdown selector.
 
 ### LoadingSpinner
 
-Activity indicator with customizable size and color.
+*Activity indicator with customizable size and color.*
 
 ```jsx
 <LoadingSpinner color="#F3971D" size="large" />
@@ -165,7 +159,7 @@ Activity indicator with customizable size and color.
 
 ### CustomModal
 
-Reusable modal that adjusts to content length with a scrollable view and customizable close button.
+*Reusable modal that scrolls and has a customizable close button.*
 
 ```jsx
 <CustomModal
@@ -192,13 +186,13 @@ Reusable modal that adjusts to content length with a scrollable view and customi
 | `closeButtonTextColor` | string   | Text color of the close button           |
 | `closeButtonWidth`     | number   | Width of the close button in pixels      |
 | `closeButtonHeight`    | number   | Height of the close button in pixels     |
-| `children`             | node     | Content to be rendered inside the modal  |
+| `children`             | node     | Content inside the modal                 |
 
 ---
 
 ### PDFUploader
 
-Component to select and upload PDF files from device storage.
+*Select and upload PDF files.*
 
 ```jsx
 <PDFUploader
@@ -209,18 +203,18 @@ Component to select and upload PDF files from device storage.
 />
 ```
 
-| Prop             | Type     | Description                         |
-| ---------------- | -------- | ----------------------------------- |
-| `onFileSelected` | function | Callback with selected file info    |
-| `buttonText`     | string   | Text displayed on the upload button |
-| `buttonColor`    | string   | Background color of the button      |
-| `textColor`      | string   | Color of the button text            |
+| Prop             | Type     | Description                      |
+| ---------------- | -------- | -------------------------------- |
+| `onFileSelected` | function | Callback with selected file info |
+| `buttonText`     | string   | Text on the upload button        |
+| `buttonColor`    | string   | Background color of the button   |
+| `textColor`      | string   | Color of the button text         |
 
 ---
 
 ### PDFDownloader
 
-Component to download or view PDF files via URL.
+*Download or view PDF via URL.*
 
 ```jsx
 <PDFDownloader
@@ -244,7 +238,7 @@ Component to download or view PDF files via URL.
 
 ### QRCodeScanner
 
-Component that uses the device camera to scan QR codes and return the scanned data.
+*Scan QR codes using device camera.*
 
 ```jsx
 <QRCodeScanner
@@ -254,17 +248,17 @@ Component that uses the device camera to scan QR codes and return the scanned da
 />
 ```
 
-| Prop         | Type     | Description                          |
-| ------------ | -------- | ------------------------------------ |
-| `onRead`     | function | Callback called with scanned data    |
-| `cameraType` | string   | Camera to use: `"front"` or `"back"` |
-| `showMarker` | boolean  | Whether to show a scanning marker    |
+| Prop         | Type     | Description                       |
+| ------------ | -------- | --------------------------------- |
+| `onRead`     | function | Callback called with scanned data |
+| `cameraType` | string   | `"front"` or `"back"`             |
+| `showMarker` | boolean  | Show scanning marker              |
 
 ---
 
 ### DataTable
 
-A simple customizable table component for displaying tabular data.
+*Display tabular data with custom styles.*
 
 ```jsx
 <DataTable
@@ -280,14 +274,87 @@ A simple customizable table component for displaying tabular data.
 />
 ```
 
-| Prop                    | Type   | Description                    |
-| ----------------------- | ------ | ------------------------------ |
-| `columns`               | array  | Array of column header strings |
-| `data`                  | array  | Array of objects with row data |
-| `headerBackgroundColor` | string | Background color of header row |
-| `rowBackgroundColor`    | string | Background color of rows       |
-| `headerTextColor`       | string | Text color for header text     |
-| `rowTextColor`          | string | Text color for row text        |
+| Prop                    | Type   | Description                 |
+| ----------------------- | ------ | --------------------------- |
+| `columns`               | array  | Column headers as strings   |
+| `data`                  | array  | Array of row data objects   |
+| `headerBackgroundColor` | string | Header row background color |
+| `rowBackgroundColor`    | string | Rows background color       |
+| `headerTextColor`       | string | Header text color           |
+| `rowTextColor`          | string | Row text color              |
+
+---
+
+### PDFViewer
+
+*Simple PDF file viewer.*
+
+```jsx
+<PDFViewer source={{ uri: 'https://example.com/file.pdf' }} />
+```
+
+| Prop             | Type   | Description                    |
+| ---------------- | ------ | ------------------------------ |
+| `source`         | object | PDF source with `uri` property |
+| `fallbackText`   | string | Text if PDF fails to load      |
+| `containerStyle` | object | Optional container styling     |
+
+---
+
+### ImageViewer
+
+*Show an image with styling and optional overlay text.*
+
+```jsx
+<ImageViewer
+  uri="https://example.com/image.jpg"
+  width={250}
+  height={150}
+  borderRadius={15}
+  borderColor="#F3971D"
+  borderWidth={3}
+  overlayText="Sample Image"
+  overlayTextColor="#fff"
+  overlayBg="rgba(0,0,0,0.5)"
+/>
+```
+
+| Prop               | Type   | Description                |
+| ------------------ | ------ | -------------------------- |
+| `uri`              | string | Image URL                  |
+| `width`            | number | Image width (default 200)  |
+| `height`           | number | Image height (default 200) |
+| `borderRadius`     | number | Border radius              |
+| `borderColor`      | string | Border color               |
+| `borderWidth`      | number | Border width               |
+| `fallbackText`     | string | Text if no image provided  |
+| `overlayText`      | string | Text overlay               |
+| `overlayTextColor` | string | Overlay text color         |
+| `overlayBg`        | string | Overlay background color   |
+
+---
+
+### Toast
+
+*Show temporary toast messages.*
+
+```jsx
+// Show toast anywhere in your app:
+Toast.show({
+  type: 'success', // success | error | info
+  text1: 'Hello',
+  text2: 'This is a toast message 👋',
+  duration: 3000,
+});
+```
+
+| Prop       | Type   | Description                                     |
+| ---------- | ------ | ----------------------------------------------- |
+| `type`     | string | Toast type: `"success"`, `"error"`, or `"info"` |
+| `text1`    | string | Title/main text                                 |
+| `text2`    | string | Optional secondary message                      |
+| `duration` | number | Duration in milliseconds                        |
+
 
 ---
 
@@ -304,7 +371,10 @@ components/
 ├── PDFUploader.js
 ├── PDFDownloader.js
 ├── QRCodeScanner.js
-└── DataTable.js
+├── DataTable.js
+├── PDFViewer.js
+├── ImageViewer.js
+├── Toast.js
 ```
 
 ---
@@ -325,3 +395,7 @@ MIT License. Feel free to use, modify, and share.
 Happy coding! 🚀
 
 ---
+
+---
+
+If you want me to generate **source code** for *any* or *all* of these components, just say which ones!
