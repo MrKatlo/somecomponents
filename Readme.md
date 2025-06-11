@@ -1,4 +1,3 @@
-````md
 # PoleComponents — Reusable React Native UI Components
 
 A set of customizable, easy-to-use React Native components designed and built by **Katlo Pole** to help you build apps faster. Perfect for hackathons, prototypes, or any React Native project.
@@ -7,17 +6,17 @@ Published as [polecomponents on npm](https://www.npmjs.com/package/polecomponent
 
 ---
 
-## Installation
+## 📦 Installation
 
 ```bash
 npm install polecomponents
 # or
 yarn add polecomponents
-````
+```
 
 ---
 
-## Usage
+## 🚀 Usage
 
 Import components from the package like this:
 
@@ -48,7 +47,7 @@ Use them in your React Native app:
 
 ---
 
-## Component Guide
+## 📘 Component Guide
 
 ### Button
 
@@ -160,37 +159,40 @@ Activity indicator with customizable size and color.
 
 ---
 
-### 🪟 `CustomModal`
+### CustomModal
 
-Custom modal component with scrolling content and customizable close button.
+Reusable modal that adjusts to content length with a scrollable view and customizable close button.
 
 ```jsx
 <CustomModal
-  visible={isOpen}
-  onClose={() => setOpen(false)}
-  title="Notice"
+  visible={isVisible}
+  onClose={() => setVisible(false)}
+  title="Important Message"
   closeButtonTitle="Dismiss"
   closeButtonColor="#F3971D"
-  closeButtonTextColor="white"
+  closeButtonTextColor="#fff"
   closeButtonWidth={120}
   closeButtonHeight={45}
 >
-  <Text>This modal content can be long and will scroll if needed.</Text>
+  <Text>Put any content here. Long content will scroll properly.</Text>
 </CustomModal>
+```
 
-Props
-Prop	Type	Description
-visible	bool	Show/hide modal
-onClose	func	Callback to close modal
-title	string	Modal title
-closeButtonTitle	string	Label for the close button (default "Close")
-closeButtonColor	string	Background color of close button
-closeButtonTextColor	string	Text color of close button
-closeButtonWidth	number	Width of close button
-closeButtonHeight	number	Height of close button
-children	node	Content inside the modal
+| Prop                   | Type     | Description                                         |
+|------------------------|----------|-----------------------------------------------------|
+| `visible`              | boolean  | Controls the visibility of the modal                |
+| `onClose`              | function | Function called to close the modal                  |
+| `title`                | string   | Title text shown at the top of the modal            |
+| `closeButtonTitle`     | string   | Text inside the close button                        |
+| `closeButtonColor`     | string   | Background color of the close button                |
+| `closeButtonTextColor` | string   | Text color of the close button                      |
+| `closeButtonWidth`     | number   | Width of the close button in pixels                 |
+| `closeButtonHeight`    | number   | Height of the close button in pixels                |
+| `children`             | node     | Content to be rendered inside the modal             |
 
-## Folder Structure
+---
+
+## 📁 Folder Structure
 
 ```
 components/
@@ -204,22 +206,17 @@ components/
 
 ---
 
-## Author
+## 👨‍💻 Author
 
-**Katlo Pole**
+**Katlo Pole**  
 Made with ❤️ for fast and reusable UI components.
 
 ---
 
-## License
+## 📝 License
 
 MIT License. Feel free to use, modify, and share.
 
 ---
 
 Happy coding! 🚀
-
-```
-
-Let me know if you want me to generate or package anything else!
-```
