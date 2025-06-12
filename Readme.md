@@ -1,12 +1,11 @@
 
----
 
 ````md
 # utility-custom-ui — Reusable React Native UI Components
 
-A set of customizable, easy-to-use React Native components designed and built by **Katlo Pole** to help you build apps faster. Perfect for hackathons, prototypes, or any React Native project.
+A set of customizable, easy-to-use React Native components built by **Katlo Pole** to help you build apps faster. Perfect for hackathons, prototypes, or production React Native apps.
 
-Published as [utility-custom-ui on npm](https://www.npmjs.com/package/utility-custom-ui)
+📦 **Published on npm**: [utility-custom-ui](https://www.npmjs.com/package/utility-custom-ui)
 
 ---
 
@@ -20,7 +19,7 @@ yarn add utility-custom-ui
 
 ---
 
-## 🚀 Usage
+## 🚀 Quick Usage
 
 ```js
 import {
@@ -47,9 +46,7 @@ import {
 
 ## 📘 Component Guide
 
-### Button
-
-*A customizable pressable button.*
+### ✅ Button
 
 ```jsx
 <Button
@@ -75,9 +72,7 @@ import {
 
 ---
 
-### Input
-
-*Styled text input with label and placeholder.*
+### ✏️ Input
 
 ```jsx
 <Input
@@ -95,13 +90,11 @@ import {
 | `placeholder`     | string | Placeholder text           |
 | `value`           | string | Input value                |
 | `onChangeText`    | func   | Callback on text change    |
-| `secureTextEntry` | bool   | Hide text input (password) |
+| `secureTextEntry` | bool   | Hide input text (password) |
 
 ---
 
-### Checkbox
-
-*Simple checkbox with label.*
+### ☑️ Checkbox
 
 ```jsx
 <Checkbox
@@ -119,9 +112,7 @@ import {
 
 ---
 
-### Select
-
-*Dropdown selector.*
+### 🔽 Select
 
 ```jsx
 <Select
@@ -142,9 +133,7 @@ import {
 
 ---
 
-### LoadingSpinner
-
-*Activity indicator with customizable size and color.*
+### 🔄 LoadingSpinner
 
 ```jsx
 <LoadingSpinner color="#F3971D" size="large" />
@@ -157,9 +146,7 @@ import {
 
 ---
 
-### CustomModal
-
-*Reusable modal that scrolls and has a customizable close button.*
+### 📦 CustomModal
 
 ```jsx
 <CustomModal
@@ -172,27 +159,25 @@ import {
   closeButtonWidth={120}
   closeButtonHeight={45}
 >
-  <Text>Put any content here. Long content will scroll properly.</Text>
+  <Text>Put any content here.</Text>
 </CustomModal>
 ```
 
-| Prop                   | Type     | Description                              |
-| ---------------------- | -------- | ---------------------------------------- |
-| `visible`              | boolean  | Controls the visibility of the modal     |
-| `onClose`              | function | Function called to close the modal       |
-| `title`                | string   | Title text shown at the top of the modal |
-| `closeButtonTitle`     | string   | Text inside the close button             |
-| `closeButtonColor`     | string   | Background color of the close button     |
-| `closeButtonTextColor` | string   | Text color of the close button           |
-| `closeButtonWidth`     | number   | Width of the close button in pixels      |
-| `closeButtonHeight`    | number   | Height of the close button in pixels     |
-| `children`             | node     | Content inside the modal                 |
+| Prop                   | Type     | Description                    |
+| ---------------------- | -------- | ------------------------------ |
+| `visible`              | boolean  | Show/hide modal                |
+| `onClose`              | function | Triggered when modal is closed |
+| `title`                | string   | Modal title                    |
+| `closeButtonTitle`     | string   | Button text                    |
+| `closeButtonColor`     | string   | Close button background        |
+| `closeButtonTextColor` | string   | Close button text color        |
+| `closeButtonWidth`     | number   | Width of close button          |
+| `closeButtonHeight`    | number   | Height of close button         |
+| `children`             | node     | Modal content                  |
 
 ---
 
-### PDFUploader
-
-*Select and upload PDF files.*
+### 📤 PDFUploader
 
 ```jsx
 <PDFUploader
@@ -203,18 +188,9 @@ import {
 />
 ```
 
-| Prop             | Type     | Description                      |
-| ---------------- | -------- | -------------------------------- |
-| `onFileSelected` | function | Callback with selected file info |
-| `buttonText`     | string   | Text on the upload button        |
-| `buttonColor`    | string   | Background color of the button   |
-| `textColor`      | string   | Color of the button text         |
-
 ---
 
-### PDFDownloader
-
-*Download or view PDF via URL.*
+### 📥 PDFDownloader
 
 ```jsx
 <PDFDownloader
@@ -226,19 +202,9 @@ import {
 />
 ```
 
-| Prop          | Type   | Description                     |
-| ------------- | ------ | ------------------------------- |
-| `url`         | string | URL of the PDF to download/view |
-| `fileName`    | string | Name of the downloaded file     |
-| `buttonText`  | string | Text on the download button     |
-| `buttonColor` | string | Background color of the button  |
-| `textColor`   | string | Text color of the button        |
-
 ---
 
-### FileUploader
-
-*Advanced file picker with progress tracking, file validation, and preview.*
+### 📁 FileUploader
 
 ```jsx
 <FileUploader
@@ -253,22 +219,9 @@ import {
 />
 ```
 
-| Prop           | Type     | Description                                |
-| -------------- | -------- | ------------------------------------------ |
-| `allowedTypes` | array    | Allowed MIME types (default: PDF/images)   |
-| `maxSize`      | number   | Maximum file size in MB (default: 10)      |
-| `onUpload`     | function | Callback with file object                  |
-| `buttonText`   | string   | Upload button text                         |
-| `buttonColor`  | string   | Button background color                    |
-| `textColor`    | string   | Button text color                          |
-| `showFileInfo` | boolean  | Show selected file details (default: true) |
-| `multiple`     | boolean  | Allow multiple files (default: false)      |
-
 ---
 
-### FileDownloader
-
-*File downloader with progress tracking and automatic file opening.*
+### ⬇️ FileDownloader
 
 ```jsx
 <FileDownloader
@@ -283,132 +236,45 @@ import {
 />
 ```
 
-| Prop                 | Type     | Description                              |
-| -------------------- | -------- | ---------------------------------------- |
-| `url`                | string   | URL of file to download                  |
-| `fileName`           | string   | Name for downloaded file                 |
-| `buttonText`         | string   | Download button text                     |
-| `buttonColor`        | string   | Button background color                  |
-| `textColor`          | string   | Button text color                        |
-| `showProgress`       | boolean  | Show progress bar (default: true)        |
-| `onDownloadStart`    | function | Called when download begins              |
-| `onDownloadComplete` | function | Called with local file URI when complete |
-| `onError`            | function | Called if download fails                 |
-
 ---
 
-### QRCodeScanner
+### 📷 QRCodeScanner
 
-# QR Scanner Component for React Native (Expo)
-
-![QR Scanner Preview](https://i.imgur.com/example.png) <!-- Replace with actual image -->
-
-A highly customizable QR scanner component for React Native using Expo's camera with control over height, text, width, and other properties.
-
-## Features
-
-- 📱 Fully customizable dimensions (height, width, scanning rectangle)
-- 🎨 Customizable colors for corners, borders, and mask
-- 🔦 Torch/flashlight toggle with customizable UI
-- 📝 Customizable instruction text
-- ⚡ Adjustable scan interval to prevent rapid re-scans
-- 🔄 Camera permission handling built-in
-- 🖌️ Extensive styling options for all elements
-
-## Installation
-
-1. First, install the required Expo package:
+A highly customizable QR scanner built with Expo Camera.
 
 ```bash
 npx expo install expo-camera
 ```
 
-2. Copy the `QrScanner.js` component file into your project.
-
-## Usage
-
 ```jsx
 import QrScanner from './components/QrScanner';
 
-function App() {
-  const handleScan = ({ data }) => {
-    console.log('Scanned data:', data);
-    alert(`Scanned QR code: ${data}`);
-  };
-
-  return (
-    <QrScanner 
-      onScan={handleScan}
-      height={500}
-      width={350}
-      cornerColor="#00FF00"
-      instructionText="Align QR code within frame"
-    />
-  );
-}
-```
-
-## Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `height` | number | 70% of window height | Total height of scanner component |
-| `width` | number | 90% of window width | Total width of scanner component |
-| `cornerColor` | string | '#FF0000' | Color of scanner frame corners |
-| `cornerWidth` | number | 2 | Thickness of corner lines |
-| `cornerLength` | number | 30 | Length of each corner line |
-| `rectDimensions` | object | {width: 250, height: 250} | Size of scanning rectangle |
-| `maskOpacity` | number | 0.5 | Opacity of surrounding mask |
-| `maskColor` | string | '#000' | Color of surrounding mask |
-| `borderColor` | string | '#FFF' | Color of scanning rectangle border |
-| `borderWidth` | number | 1 | Width of scanning rectangle border |
-| `scanInterval` | number | 2000 | Minimum time between scans (ms) |
-| `onScan` | function | required | Callback when QR is scanned |
-| `instructionText` | string | 'Align the QR code within the frame' | Help text |
-| `instructionTextStyle` | object | {} | Style for instruction text |
-| `instructionContainerStyle` | object | {} | Style for instruction container |
-| `showInstruction` | boolean | true | Whether to show instructions |
-| `torchEnabled` | boolean | false | Initial torch state |
-| `torchButton` | boolean | true | Whether to show torch toggle |
-| `torchButtonStyle` | object | {} | Style for torch button |
-| `torchButtonTextStyle` | object | {} | Style for torch button text |
-| `torchOnText` | string | '🔦 On' | Text for torch on state |
-| `torchOffText` | string | '🔦 Off' | Text for torch off state |
-| `containerStyle` | object | {} | Additional container styles |
-| `cameraStyle` | object | {} | Additional camera view styles |
-
-## Example Customization
-
-```jsx
 <QrScanner 
-  height={600}
-  width={300}
-  cornerColor="#4287f5"
-  cornerWidth={3}
-  cornerLength={40}
-  rectDimensions={{ width: 200, height: 200 }}
-  maskOpacity={0.7}
-  instructionText="Scan your ticket QR code"
-  instructionTextStyle={{ 
-    fontSize: 18, 
-    fontWeight: 'bold',
-    color: 'white'
-  }}
-  onScan={handleScan}
-  torchButton={true}
-  torchButtonStyle={{ 
-    backgroundColor: 'rgba(255,255,255,0.3)',
-    padding: 12,
-    borderRadius: 20
-  }}
-  torchOnText="🔦 Light On"
-  torchOffText="🔦 Light Off"
+  onScan={({ data }) => alert(data)}
+  height={500}
+  width={350}
+  cornerColor="#00FF00"
+  instructionText="Align QR code within frame"
 />
 ```
 
-## Permissions
+| Prop              | Type     | Default                      | Description                    |
+| ----------------- | -------- | ---------------------------- | ------------------------------ |
+| `onScan`          | function | required                     | Callback on successful scan    |
+| `height`          | number   | 70% of screen height         | Scanner height                 |
+| `width`           | number   | 90% of screen width          | Scanner width                  |
+| `cornerColor`     | string   | '#FF0000'                    | Color of corner frames         |
+| `cornerWidth`     | number   | 2                            | Thickness of corner lines      |
+| `cornerLength`    | number   | 30                           | Length of corner lines         |
+| `rectDimensions`  | object   | `{ width: 250, height: 250}` | Size of the scanning rectangle |
+| `maskOpacity`     | number   | 0.5                          | Mask opacity                   |
+| `maskColor`       | string   | '#000'                       | Mask color                     |
+| `scanInterval`    | number   | 2000                         | Time between scans in ms       |
+| `torchButton`     | boolean  | true                         | Show flashlight toggle         |
+| `torchEnabled`    | boolean  | false                        | Initial flashlight state       |
+| `instructionText` | string   | 'Align the QR code…'         | Instructional message          |
 
-The component handles camera permissions automatically, but make sure you have the following in your `app.json`:
+🔐 **Permissions** (in `app.json`):
 
 ```json
 {
@@ -425,287 +291,37 @@ The component handles camera permissions automatically, but make sure you have t
 }
 ```
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)# QR Scanner Component for React Native (Expo)
-
-![QR Scanner Preview](https://i.imgur.com/example.png) <!-- Replace with actual image -->
-
-A highly customizable QR scanner component for React Native using Expo's camera with control over height, text, width, and other properties.
-
-## Features
-
-- 📱 Fully customizable dimensions (height, width, scanning rectangle)
-- 🎨 Customizable colors for corners, borders, and mask
-- 🔦 Torch/flashlight toggle with customizable UI
-- 📝 Customizable instruction text
-- ⚡ Adjustable scan interval to prevent rapid re-scans
-- 🔄 Camera permission handling built-in
-- 🖌️ Extensive styling options for all elements
-
-## Installation
-
-1. First, install the required Expo package:
-
-```bash
-npx expo install expo-camera
-```
-
-2. Copy the `QrScanner.js` component file into your project.
-
-## Usage
-
-```jsx
-import QrScanner from './components/QrScanner';
-
-function App() {
-  const handleScan = ({ data }) => {
-    console.log('Scanned data:', data);
-    alert(`Scanned QR code: ${data}`);
-  };
-
-  return (
-    <QrScanner 
-      onScan={handleScan}
-      height={500}
-      width={350}
-      cornerColor="#00FF00"
-      instructionText="Align QR code within frame"
-    />
-  );
-}
-```
-
-## Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `height` | number | 70% of window height | Total height of scanner component |
-| `width` | number | 90% of window width | Total width of scanner component |
-| `cornerColor` | string | '#FF0000' | Color of scanner frame corners |
-| `cornerWidth` | number | 2 | Thickness of corner lines |
-| `cornerLength` | number | 30 | Length of each corner line |
-| `rectDimensions` | object | {width: 250, height: 250} | Size of scanning rectangle |
-| `maskOpacity` | number | 0.5 | Opacity of surrounding mask |
-| `maskColor` | string | '#000' | Color of surrounding mask |
-| `borderColor` | string | '#FFF' | Color of scanning rectangle border |
-| `borderWidth` | number | 1 | Width of scanning rectangle border |
-| `scanInterval` | number | 2000 | Minimum time between scans (ms) |
-| `onScan` | function | required | Callback when QR is scanned |
-| `instructionText` | string | 'Align the QR code within the frame' | Help text |
-| `instructionTextStyle` | object | {} | Style for instruction text |
-| `instructionContainerStyle` | object | {} | Style for instruction container |
-| `showInstruction` | boolean | true | Whether to show instructions |
-| `torchEnabled` | boolean | false | Initial torch state |
-| `torchButton` | boolean | true | Whether to show torch toggle |
-| `torchButtonStyle` | object | {} | Style for torch button |
-| `torchButtonTextStyle` | object | {} | Style for torch button text |
-| `torchOnText` | string | '🔦 On' | Text for torch on state |
-| `torchOffText` | string | '🔦 Off' | Text for torch off state |
-| `containerStyle` | object | {} | Additional container styles |
-| `cameraStyle` | object | {} | Additional camera view styles |
-
-## Example Customization
-
-```jsx
-<QrScanner 
-  height={600}
-  width={300}
-  cornerColor="#4287f5"
-  cornerWidth={3}
-  cornerLength={40}
-  rectDimensions={{ width: 200, height: 200 }}
-  maskOpacity={0.7}
-  instructionText="Scan your ticket QR code"
-  instructionTextStyle={{ 
-    fontSize: 18, 
-    fontWeight: 'bold',
-    color: 'white'
-  }}
-  onScan={handleScan}
-  torchButton={true}
-  torchButtonStyle={{ 
-    backgroundColor: 'rgba(255,255,255,0.3)',
-    padding: 12,
-    borderRadius: 20
-  }}
-  torchOnText="🔦 Light On"
-  torchOffText="🔦 Light Off"
-/>
-```
-
-## Permissions
-
-The component handles camera permissions automatically, but make sure you have the following in your `app.json`:
-
-```json
-{
-  "expo": {
-    "plugins": [
-      [
-        "expo-camera",
-        {
-          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera for QR scanning"
-        }
-      ]
-    ]
-  }
-}
-```
 ---
 
-### DataTable
-
-*Feature-rich table with sorting, scrolling, and customization.*
+### 📊 DataTable
 
 ```jsx
 <DataTable
-  columns={['Name', 'Age', 'Department']}
-  data={[
-    { Name: 'John Doe', Age: 32, Department: 'Marketing' },
-    { Name: 'Jane Smith', Age: 28, Department: 'Engineering' }
-  ]}
+  columns={['Name', 'Age']}
+  data={[{ Name: 'John', Age: 30 }]}
   headerBackgroundColor="#F3971D"
   rowBackgroundColor="#fff"
-  headerTextColor="#fff"
-  rowTextColor="#000"
   sortable={true}
-  onSort={(key, direction) => console.log(`Sorted by ${key} ${direction}`)}
   stickyHeader={true}
-  height={400}
 />
 ```
 
-| Prop                    | Type          | Description                            |
-| ----------------------- | ------------- | -------------------------------------- |
-| `columns`               | array         | Column headers                         |
-| `data`                  | array         | Row data objects                       |
-| `headerBackgroundColor` | string        | Header background color                |
-| `rowBackgroundColor`    | string        | Row background color                   |
-| `headerTextColor`       | string        | Header text color                      |
-| `rowTextColor`          | string        | Row text color                         |
-| `borderColor`           | string        | Border color (default: #e0e0e0)        |
-| `sortable`              | boolean       | Enable column sorting (default: false) |
-| `onSort`                | function      | Callback when column is sorted         |
-| `stickyHeader`          | boolean       | Keep header visible when scrolling     |
-| `height`                | number        | Table height in pixels                 |
-| `width`                 | number/string | Table width (default: '100%')          |
-
 ---
 
-### PDFViewer
-
-*Simple PDF file viewer.*
+### 📄 PDFViewer
 
 ```jsx
 <PDFViewer source={{ uri: 'https://example.com/file.pdf' }} />
 ```
 
-| Prop             | Type   | Description                    |
-| ---------------- | ------ | ------------------------------ |
-| `source`         | object | PDF source with `uri` property |
-| `fallbackText`   | string | Text if PDF fails to load      |
-| `containerStyle` | object | Optional container styling     |
+---
+
+## 📬 Feedback & Contributing
+
+Pull requests are welcome! Open an issue to suggest improvements or request new components.
 
 ---
 
-### ImageViewer
+## 📄 License
 
-*Show an image with styling and optional overlay text.*
-
-```jsx
-<ImageViewer
-  uri="https://example.com/image.jpg"
-  width={250}
-  height={150}
-  borderRadius={15}
-  borderColor="#F3971D"
-  borderWidth={3}
-  overlayText="Sample Image"
-  overlayTextColor="#fff"
-  overlayBg="rgba(0,0,0,0.5)"
-/>
-```
-
-| Prop               | Type   | Description                |
-| ------------------ | ------ | -------------------------- |
-| `uri`              | string | Image URL                  |
-| `width`            | number | Image width (default 200)  |
-| `height`           | number | Image height (default 200) |
-| `borderRadius`     | number | Border radius              |
-| `borderColor`      | string | Border color               |
-| `borderWidth`      | number | Border width               |
-| `fallbackText`     | string | Text if no image provided  |
-| `overlayText`      | string | Text overlay               |
-| `overlayTextColor` | string | Overlay text color         |
-| `overlayBg`        | string | Overlay background color   |
-
----
-
-### Toast
-
-*Show temporary toast messages.*
-
-```js
-Toast.show({
-  type: 'success', // success | error | info
-  text1: 'Hello',
-  text2: 'This is a toast message 👋',
-  duration: 3000,
-});
-```
-
-| Prop       | Type   | Description                                     |
-| ---------- | ------ | ----------------------------------------------- |
-| `type`     | string | Toast type: `"success"`, `"error"`, or `"info"` |
-| `text1`    | string | Title/main text                                 |
-| `text2`    | string | Optional secondary message                      |
-| `duration` | number | Duration in milliseconds                        |
-
----
-
-## 📁 Folder Structure
-
-```
-components/
-├── Button.js
-├── Input.js
-├── Checkbox.js
-├── Select.js
-├── LoadingSpinner.js
-├── CustomModal.js
-├── PDFUploader.js
-├── PDFDownloader.js
-├── FileUploader.js
-├── FileDownloader.js
-├── QRCodeScanner.js
-├── DataTable.js
-├── PDFViewer.js
-├── ImageViewer.js
-├── Toast.js
-```
-
----
-
-## 👨‍💻 Author
-
-**Katlo Pole**
-Made with ❤️ for fast and reusable UI components.
-
----
-
-## 📝 License
-
-MIT License. Feel free to use, modify, and share.
-
----
-
-Happy coding! 🚀
-
-```
-I'm happy to assist!
-```
+[MIT](https://choosealicense.com/licenses/mit/)
