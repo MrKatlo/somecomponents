@@ -2,20 +2,20 @@
 ---
 
 ````md
-# PoleComponents — Reusable React Native UI Components
+# utility-custom-ui — Reusable React Native UI Components
 
 A set of customizable, easy-to-use React Native components designed and built by **Katlo Pole** to help you build apps faster. Perfect for hackathons, prototypes, or any React Native project.
 
-Published as [polecomponents on npm](https://www.npmjs.com/package/polecomponents)
+Published as [utility-custom-ui on npm](https://www.npmjs.com/package/polecomponents)
 
 ---
 
 ## 📦 Installation
 
 ```bash
-npm install polecomponents
+npm install utility-custom-ui
 # or
-yarn add polecomponents
+yarn add utility-custom-ui
 ````
 
 ---
