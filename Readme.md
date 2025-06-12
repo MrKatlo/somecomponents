@@ -6,7 +6,7 @@
 
 A set of customizable, easy-to-use React Native components designed and built by **Katlo Pole** to help you build apps faster. Perfect for hackathons, prototypes, or any React Native project.
 
-Published as [utility-custom-ui on npm](https://www.npmjs.com/package/polecomponents)
+Published as [utility-custom-ui on npm](https://www.npmjs.com/package/utility-custom-ui)
 
 ---
 
@@ -40,7 +40,7 @@ import {
   Alert,
   FileUploader,
   FileDownloader
-} from 'polecomponents';
+} from "utility-custom-ui";
 ```
 
 ---
